@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulo - Playlist</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/Favicon - Estrella.png" type="image/png">
+
+        <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/articulos/playlists.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CALA</div>
+        <nav class="nav">
+        <ul>
+            <li><a href="../#inicio">INICIO</a></li>
+            <li><a href="../#articulos" class="active">ARTÍCULOS</a></li>
+            <li><a href="../#contacto">CONTACTO</a></li>
+        </ul>
+        <a href="https://instagram.com/renacala" target="_blank" class="ig-link">
+            <img src="../img/logoInstagram.png" alt="Instagram">
+        </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="titulo-principal">Una playlist para cada momento</h1>
+        <p class="fecha-publicacion">Publicado el 11 de mayo de 2025</p>
+        <p class="bajada">
+            Algunas canciones te abrazan, otras te hacen mover el cuerpo, y muchas simplemente acompañan. Esta lista es eso: mi caos musical con sentido propio.
+        </p>
+
+        <section class="playlist-grid">
+            <img src="../img/playlists/telobuscaste.jpg" alt="Canción 1">
+            <img src="../img/playlists/hannahmontana.jpg" alt="Canción 2">
+            <img src="../img/playlists/losecontrol.jpg" alt="Canción 3">
+            <img src="../img/playlists/sinoca.jpg" alt="Canción 4">
+            <img src="../img/playlists/whereisthelove.jpg" alt="Canción 5">
+        </section>          
+
+        <div class="columna doble">
+        <div class="texto">
+            <p>
+            Escucho música todo el tiempo. Mientras estudio, cuando viajo, cocino o necesito cortar un poco. Esta mezcla de temas dice más de mí que cualquier bio. Hay días que empiezo con Nathy Peluso, otros con Hannah Montana, y eso está bien. No sigo una lógica, sigo lo que me vibra en ese momento.
+            </p>
+            <p>
+            No busco que combine, busco que diga algo. Hay canciones que me hacen llorar sin saber por qué, otras que me hacen sonreír antes de que empiece el estribillo. Cada una está ahí por algo.
+            </p>
+        </div>
+        <div class="imagen-lateral">
+            <img src="../img/playlists/buenosaires.jpg" alt="Captura de playlist en Spotify" />
+        </div>
+        </div>
+
+        <div class="columna_doble">
+        <h2>Un soundtrack emocional</h2>
+        <p>
+            La playlist es eso: mi desorden emocional hecho música. Lo que me calma, lo que me empuja, lo que me hace llorar o bailar sola en la cocina. Todo tiene un porqué, aunque no lo explique.        </p>
+        </div>
+
+        <div class="columna_doble">
+        <h2>Un reflejo de mí</h2>
+        <p>
+            Esta playlist es una especie de espejo: caótica, cambiante, honesta. Cada tema me recuerda algo, o me inventa un mundo. No la armo para que suene bien, la armo para sentirme mejor.
+        </p>
+        </div>
+
+        <div class="articulo-lateral">
+            <img src="../img/playlists/perroauris.jpg" alt="Chica con auriculares escuchando música" />
+            <div class="texto-lateral">
+                <h2>Mi lista, mi refugio</h2>
+                <p>
+                Hay días en los que no quiero hablar, pero sí escuchar. Y esa lista, con sus mezclas extrañas y letras profundas o graciosas, está siempre para mí. Porque a veces, una canción basta para hacerme sentir acompañada.
+                </p>
+            </div>
+        </div>
+
+        <section class="playlist-grid">
+            <img src="../img/playlists/elfantasma.jpg" alt="Canción 1">
+            <img src="../img/playlists/vivirasi.jpg" alt="Canción 2">
+            <img src="../img/playlists/queesdios.jpg" alt="Canción 3">
+            <img src="../img/playlists/flechazoenelcentro.jpg" alt="Canción 4">
+            <img src="../img/playlists/limonysal.jpg" alt="Canción 5">
+        </section>  
+
+        <blockquote style="color: #7f8969; font-weight: bold; text-align: center;">
+        “A veces una canción dice exactamente lo que no sabés poner en palabras.”
+        </blockquote>
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#495144" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

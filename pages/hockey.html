@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulo - Hockey</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/Favicon - Estrella.png" type="image/png">
+
+    <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/articulos/hockey.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CALA</div>
+        <nav class="nav">
+        <ul>
+            <li><a href="../#inicio">INICIO</a></li>
+            <li><a href="../#articulos" class="active">ARTÍCULOS</a></li>
+            <li><a href="../#contacto">CONTACTO</a></li>
+        </ul>
+        <a href="https://instagram.com/renacala" target="_blank" class="ig-link">
+            <img src="../img/logoInstagram.png" alt="Instagram">
+        </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="titulo-principal">Aprendí a caer y levantarme jugando al hockey</h1>
+        <p class="fecha-publicacion">Publicado el 11 de mayo de 2025</p>
+        <p class="bajada">
+        Desde los 6 años, el hockey no fue solo un deporte: fue mi forma de aprender sobre la vida, el trabajo en equipo y la resiliencia.
+        </p>
+
+        <div class="columna_doble">
+            <img src="../img/hockey/hockey.jpg" alt="Césped con palo y bocha" />
+        </div>
+
+        <div class="columna doble">
+            <div class="texto">
+                <p>
+                    Empecé a jugar al hockey de chica, casi sin saber lo que era una bocha o cómo se agarraba el palo. Pero enseguida me atrapó: la adrenalina de un partido, el sonido del golpe contra el sintético y las charlas eternas en vestuarios.
+                </p>
+                <p>
+                    Con el tiempo, el hockey me enseñó mucho más que técnica. Aprendí a caer, literal y emocionalmente, y a levantarme cada vez. A perder con la frente en alto, y a ganar con humildad. Las derrotas me hicieron fuerte, pero los vínculos fueron lo más valioso.
+                </p>
+            </div>
+            <div class="imagen-lateral">
+                <img src="../img/hockey/yodebebeHockey.jpg" alt="Equipo de hockey reunido">
+            </div>
+        </div>
+
+        <div class="columna_doble">
+            <h2>Mucho más que un deporte</h2>
+            <p>
+                El hockey fue una escuela emocional. Me enseñó a convivir con la frustración, a escuchar al otro, a bancar a una compañera cuando no tiene su mejor día, y a confiar en que todo se construye entre todas.
+            </p>
+        </div>
+
+        <div class="articulo-lateral">
+            <img src="../img/hockey/jugandochiquitas.jpg" alt="Cancha de hockey vacía" />
+            <div class="texto-lateral">
+                <h2>El valor de lo invisible</h2>
+                <p>
+                A veces los logros más importantes no se ven en el marcador, sino en cómo reaccionás ante un error o cómo sostenés al grupo. El hockey me enseñó eso: que lo invisible, también cuenta.
+                </p>
+            </div>
+        </div>
+
+        <blockquote style="color: #7f8969; font-weight: bold; text-align: center;">
+            “El hockey me enseñó que no todo se trata de ganar, sino de con quién compartís la cancha.”
+        </blockquote>
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#495144" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

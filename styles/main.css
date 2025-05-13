@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding-top: 80px;
+    line-height: 1.6;              /* mejora lectura */
+    font-size: 1rem;               /* tamaño base adaptable */
+    background-color: #fffdfc;     /* fondo neutro por defecto */
+    color: #222;                   /* color de texto base */
+}
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renata Calabrese</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/Favicon.png" type="image/png">
+
+    <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--STYLES-->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/articulos/articulos.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/sobremi.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Renata Calabrese</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#sobre-mi">SOBRE MI</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="intro">
+        <div class="intro-contenedor">
+            <img src="img/Foto Rena.jpg" alt="Renata" class="intro-img">
+            <div class="intro-texto">
+                <h2>Hola, soy Renata Calabrese</h2>
+                <p>Soy estudiante de Ingeniería en Informática y este espacio es una forma de compartir lo que me gusta y me representa.</p>
+                <p>Me interesa el desarrollo web, el diseño, la tecnología y todo lo que despierte mi creatividad.</p>
+                <p>Si bien todavía no tengo experiencia laboral, estoy construyendo mi camino con entusiasmo y ganas de aprender.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dibujo-grid">
+        <img src="img/imgSection/hockeyDibujo.png" alt="Dibujo 1">
+        <img src="img/imgSection/fuerzaCafe.png" alt="Dibujo 2">
+        <img src="img/imgSection/frontendDibujo.png" alt="Dibujo 3">
+        <img src="img/imgSection/aurisDibujo.png" alt="Dibujo 4">
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi-section">
+        <div class="sobre-mi-contenedor">
+            <h2 class="sobre-mi-titulo">Sobre mí</h2>
+            <div class="linea-divisoria"></div>
+            <p>
+                Soy estudiante de Ingeniería en Informática en la Universidad Argentina de la Empresa (UADE), actualmente cursando el cuarto año con 34 materias aprobadas de 52 y un promedio de 8.69.
+            </p>
+            <p>
+                Me apasiona la tecnología y disfruto combinarla con el diseño y la creatividad. Me considero una persona proactiva, curiosa y con muchas ganas de seguir aprendiendo. 
+            </p>
+            <p>
+                Juego al hockey desde los 6 años, lo que me enseñó el valor del compromiso, la constancia y el trabajo en equipo. Es una parte fundamental de quién soy y de cómo enfrento los desafíos.
+            </p>
+            <p>
+                Actualmente estoy en búsqueda de mi primera experiencia laboral en el área de informática, donde pueda crecer profesionalmente y sumar valor desde mi motivación y dedicación.
+            </p>
+        </div>
+
+        <div class="cv-boton-contenedor">
+            <a href="Renata Calabrese - CV.pdf" target="_blank" class="boton-cv">Descargar CV</a>
+        </div>
+
+    </section>
+
+
+
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-box">
+            <div class="contacto-contenedor">
+                <div class="info-contacto">
+                    <h2>Contacto</h2>
+                    <ul>
+                        <li>📧 rena.calabrese@gmail.com</li>
+                        <li>📞 +54 9 11 4054 - 1810</li>
+                        <li>📍 Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+        
+                <form class="formulario-contacto" action="https://formspree.io/f/myzwbkdn" method="POST">
+                    <div class="form-doble">
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div>
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+            
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            
+                    <button type="submit">Enviar</button>
+
+                    <!-- Mensaje dinámico debajo del botón -->
+                    <p id="estado-mensaje" style="margin-top: 1rem;"></p>
+                </form>
+            </div>
+        </div>
+    </section>      
+    
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+            
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#5c6c5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/renatacalabrese" target="_blank" class="ln-link" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#5c6c5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+
+        </div>  
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>  
+
+    <!--Script para mostrar el mensaje cuando se manda el Form-->
+    <script>
+        const formulario = document.querySelector('.formulario-contacto');
+        const estado = document.getElementById('estado-mensaje');
+
+        formulario.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            estado.textContent = "Enviando...";
+            estado.className = ""; // Limpia clases previas
+
+            const datos = new FormData(formulario);
+            try {
+            const respuesta = await fetch(formulario.action, {
+                method: 'POST',
+                body: datos,
+                headers: {
+                'Accept': 'application/json'
+                }
+            });
+
+            if (respuesta.ok) {
+                formulario.reset();
+                estado.textContent = "¡Gracias por tu mensaje! Te responderé pronto 💌";
+                estado.className = "ok";
+            } else {
+                throw new Error();
+            }
+            } catch {
+            estado.textContent = "⚠️ Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.";
+            estado.className = "error";
+            }
+        });
+    </script>
+
+</body>
+</html>

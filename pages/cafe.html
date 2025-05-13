@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulo - Cafe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/Favicon - Estrella.png" type="image/png">
+
+    <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/articulos/cafe.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CALA</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="../#inicio">INICIO</a></li>
+                <li><a href="../#articulos" class="active">ARTÍCULOS</a></li>
+                <li><a href="../#contacto">CONTACTO</a></li>
+            </ul>
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link">
+                <img src="../img/logoInstagram.png" alt="Instagram">
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="titulo-principal">El café siempre estuvo en casa</h1>
+        <p class="fecha-publicacion">Publicado el 10 de mayo de 2025</p>
+        <p class="bajada">
+            De los granos de mi papá a mi deseo de crear algo propio. Una historia que nació en casa y que hoy inspira mis ganas de emprender.
+        </p>
+        <div class="columna_doble">
+            <img src="../img/cafe/coffee-banner.jpg" alt="Café sobre la mesa" />
+        </div>
+
+        <div class="columna doble">
+            <div class="texto">
+                <p>
+                    Desde chica, el café fue parte del paisaje en casa. Mi papá tiene un emprendimiento relacionado al café y siempre me llamó la atención cómo se apasionaba por cada grano, cada origen, cada aroma.
+                </p>
+                <p>
+                    Con el tiempo, me fui metiendo más. Al principio solo lo tomaba por rutina, pero hoy es un ritual. Me encanta descubrir cafés nuevos, probar métodos distintos y aprender sobre lo que hay detrás de una taza bien hecha.
+                </p>
+            </div>
+            <div class="imagen-lateral">
+                <img src="../img/cafe/chicacafe.jpg" alt="Detalle de café vertido">
+            </div>
+        </div>
+        
+        <div class="columna_doble">
+            <h2>Mi ritual diario</h2>
+            <p>
+            Preparar café se convirtió en una pausa sagrada. Me gusta elegir el grano según el día, molerlo en el momento y disfrutar del aroma que llena el ambiente. Uso prensa francesa, porque me encanta cómo resalta los sabores del café colombiano, mi favorito desde siempre.
+            </p>
+        </div>
+
+        <div class="columna_doble">
+            <h2>Lo que aprendí mirando</h2>
+            <p>
+                Sin saberlo, mi papá me enseñó que un buen café no solo se trata de sabor, sino de respeto por el proceso. De él heredé el amor por el detalle, la constancia y la idea de que un producto puede ser reflejo de uno mismo.
+            </p>
+        </div>
+
+        <div class="articulo-lateral">
+            <img src="../img/cafe/coffee-hands.jpg" alt="Sosteniendo taza de café" />
+            <div class="texto-lateral">
+                <h2>Un sueño que va tomando forma</h2>
+                <p>
+                    Hoy, mi deseo es emprender con una marca de café que refleje lo que me mueve: lo visual, lo sensorial y lo auténtico. No se trata solo de vender café, sino de compartir una experiencia que se sienta cercana.
+                </p>
+            </div>
+        </div> 
+
+        <div class="columna_doble">
+            <h2>Una marca con alma</h2>
+            <p>
+                Sueño con una marca de café que combine lo estético y lo emocional. Una identidad visual cuidada, mensajes reales y empaques que inspiren. No quiero vender café, quiero invitar a una pausa. A una conversación. A una idea que arranca con una taza caliente en las manos.
+            </p>
+        </div>
+        
+        <blockquote style="color: #7f8969; font-weight: bold; text-align: center;">
+            “Cada taza es una excusa para crear, conectar y volver a mí misma.”  
+        </blockquote>
+
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#495144" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>  
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

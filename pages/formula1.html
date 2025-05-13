@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulo - Formula 1</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/Favicon - Estrella.png" type="image/png">
+
+    <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/articulos/formula1.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CALA</div>
+        <nav class="nav">
+        <ul>
+            <li><a href="../#inicio">INICIO</a></li>
+            <li><a href="../#articulos" class="active">ARTÍCULOS</a></li>
+            <li><a href="../#contacto">CONTACTO</a></li>
+        </ul>
+        <a href="https://instagram.com/renacala" target="_blank" class="ig-link">
+            <img src="../img/logoInstagram.png" alt="Instagram">
+        </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="titulo-principal">Domingos de F1 con Ferrari y papá</h1>
+        <p class="fecha-publicacion">Publicado el 10 de mayo de 2025</p>
+        <p class="bajada">
+            Desde que tengo memoria, los domingos tienen olor a café y sonido a motores. Y si corre Ferrari, más todavía.
+        </p>
+
+        <div class="columna_doble">
+            <img src="../img/formula1/formula1Auto.jpg" alt="Largada de Fórmula 1" />
+        </div>
+
+        <div class="columna doble">
+            <div class="texto">
+                <p>
+                    La Fórmula 1 no es solo una carrera. Para mí es una tradición. De esas que se sienten sin esfuerzo, que ya son parte de la semana. Porque los domingos son de F1, y los miro con mi papá.
+                </p>
+                <p>
+                    Ferrari es nuestro equipo, aunque suframos más de lo que festejamos. Pero no importa. Nos bancamos cada error de estrategia, cada parada lenta, cada abandono con el corazón apretado… y seguimos ahí, firmes.
+                </p>
+            </div>
+            <div class="imagen-lateral">
+                <img src="../img/formula1/f1autos.jpg" alt="Cámara onboard F1" />
+            </div>
+        </div>
+
+        <div class="columna_doble">
+            <h2>Más que autos, una conexión</h2>
+            <p>
+                A veces no charlamos tanto, pero compartimos el momento. Los comentarios, las puteadas, el “si Leclerc no se choca, la gana”... y así se nos pasan las mañanas. Es una forma de estar juntos sin que haga falta decir mucho.
+            </p>
+        </div>
+
+        <div class="columna_doble">
+            <h2>El equipo del corazón</h2>
+            <p>
+                Me gusta Ferrari por historia, por diseño, por ese rojo que se ve de lejos. Pero más me gusta porque lo comparto con él. Y aunque no siempre estén en el podio, para nosotros siempre es un plan.
+            </p>
+        </div>
+
+        <div class="articulo-lateral">
+            <img src="../img/formula1/personaF1.jpg" alt="Podio Fórmula 1" />
+            <div class="texto-lateral">
+                <h2>Una tradición que no se corta</h2>
+                <p>
+                    Hay domingos en los que nada más importa. Se apaga todo lo demás, se prende la carrera. Y si gana Ferrari, se grita. Y si no, igual lo vivimos juntos.
+                </p>
+            </div>
+        </div>
+
+        <blockquote style="color: #7f8969; font-weight: bold; text-align: center;">
+            “No sé si algún día Ferrari volverá a ganar seguido, pero igual vamos a estar ahí. Como siempre.”
+        </blockquote>
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#495144" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* Para que no desborde */
+* {
+    box-sizing: border-box;
+}
+
+.contacto-box {
+    background-color: #d9d9d9;
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+}
+
+.contacto-section {
+    padding: 4rem 2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.info-contacto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.info-contacto h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5c6c5e;
+    margin-bottom: 1.2rem;
+}
+
+.info-contacto ul {
+    list-style: none;
+    padding: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.formulario-contacto {
+    flex: 2;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario-contacto label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    transition: border 0.3s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #5c6c5e;
+    outline: none;
+}
+
+.form-doble {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-doble > div {
+    flex: 1;
+    min-width: 140px;
+}
+
+.formulario-contacto button {
+    background-color: #5c6c5e;
+    color: white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#estado-mensaje {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+#estado-mensaje.ok {
+    color: #388e3c;
+}
+
+#estado-mensaje.error {
+    color: #d32f2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .contacto-contenedor {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .info-contacto,
+    .formulario-contacto {
+        width: 100%;
+    }
+
+    .formulario-contacto {
+        min-width: 0;
+    }
+
+    .info-contacto h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .info-contacto ul {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .form-doble {
+        flex-direction: column;
+    }
+
+    .form-doble > div {
+        width: 100%;
+    }
+
+    .formulario-contacto button {
+        width: 100%;
+        text-align: center;
+    }
+}

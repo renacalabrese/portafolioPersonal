@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articulo - Programacion</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/Favicon - Estrella.png" type="image/png">
+
+    <!--TIPOGRAFIA-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/articulos/programacion.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">CALA</div>
+        <nav class="nav">
+        <ul>
+            <li><a href="../#inicio" >INICIO</a></li>
+            <li><a href="../#articulos" class="active">ARTÍCULOS</a></li>
+            <li><a href="../#contacto">CONTACTO</a></li>
+        </ul>
+        <a href="https://instagram.com/renacala" target="_blank" class="ig-link">
+            <img src="../img/logoInstagram.png" alt="Instagram">
+        </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="titulo-principal">Entre código y diseño: mi forma de crear</h1>
+        <p class="fecha-publicacion">Publicado el 12 de mayo de 2025</p>
+        <p class="bajada">
+        No todo en la programación es lógica pura. A veces, también se trata de elegir una tipografía, una animación o decidir dónde va ese botón.
+        </p>
+
+        <section class="programacion-grid">
+            <img src="../img/programacion/modelado.jpg" alt="Canción 1">
+            <img src="../img/programacion/pinterest.jpg" alt="Canción 2">
+            <img src="../img/programacion/programacionCoffee.jpg" alt="Canción 3">
+            <img src="../img/programacion/ipad.jpg" alt="Canción 4">
+            <img src="../img/programacion/figma.jpg" alt="Canción 5">
+        </section> 
+
+        <div class="columna doble">
+        <div class="texto">
+            <p>
+            Siempre me atrajo esa parte de la programación donde el diseño y la estructura se encuentran. Me gusta cuando una web no solo funciona bien, sino que también se siente bien.
+            </p>
+            <p>
+            Me pasa algo especial con el front-end: puedo pasar horas ajustando detalles mínimos hasta que todo encaje. A veces no se nota, pero yo sé que está ahí. Y eso también es programar.
+            </p>
+        </div>
+        <div class="imagen-lateral">
+            <img src="../img/programacion/design.jpg" alt="Pantalla con código y diseño" />
+        </div>
+        </div>
+
+        <div class="columna_doble">
+        <h2>Diseñar la tienda de mi papá</h2>
+        <p>
+            Un proyecto que me encantó fue diseñar la página para la tienda online de mi papá. No está programada todavía, pero armé todo el diseño: paleta de colores, estructura de navegación, estilo de los productos. Fue un desafío que combinó lo emocional con lo técnico.
+        </p>
+        </div>
+
+        <div class="articulo-lateral">
+        <img src="../img/programacion/chicaProgramando.jpg" alt="Mockup de tienda online diseñada" />
+        <div class="texto-lateral">
+            <h2>Programar también es pensar en personas</h2>
+            <p>
+            Lo que más me gusta del diseño web es que estoy creando algo que otra persona va a usar. No se trata solo de que funcione, sino de que sea claro, agradable, fácil. Por eso me importa tanto cómo se ve.
+            </p>
+        </div>
+        </div>
+
+        <blockquote style="color: #7f8969; font-weight: bold; text-align: center;">
+        “El código arma la estructura, pero el diseño le da alma.”
+        </blockquote>
+    </div>
+
+    <footer>
+        <div class="footer-texto">
+            <p>© 2025 CALA.</p>
+            <p>Diseñado por Renata.</p>
+
+            <a href="https://instagram.com/renacala" target="_blank" class="ig-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="#495144" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Intersección
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                threshold: 0.6 // Se activa cuando el 60% de la sección es visible
+            }
+        );
+    
+        // Secciones a observar
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    
+        // Al hacer clic, guarda el scroll en localStorage por si querés mantenerlo (opcional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>
